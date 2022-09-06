@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const Container = styled.div`
+export const HeaderContainer = styled.div`
     margin: 20px;
     display: flex;
     justify-content: space-between;
@@ -73,5 +73,4 @@ export const MenuMobile = styled.nav`
 
         }
     `}
-
 `;

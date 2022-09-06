@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import {FiMenu} from "react-icons/fi";
 import {AiOutlineClose} from "react-icons/ai"
 import {ReactComponent as Logo} from "../../icons/logo1.svg";
-import { Container, MenuMobile } from "./style";
+import { HeaderContainer, MenuMobile } from "./style";
 
 function Header(props) {
     const [isMenuActive, setIsMenuActive] = useState(false);
@@ -16,7 +16,7 @@ function Header(props) {
     }
 
     return(
-        <Container>
+        <HeaderContainer>
             <MenuMobile
                 isMenuActive={isMenuActive}
                 theme={props.theme}
@@ -31,7 +31,7 @@ function Header(props) {
             <FiMenu onClick={() => {menuToggler()}} size={24}/>
             <Logo />
             <button onClick={props.themeToggler}>Trocar</button>
-        </Container>
+        </HeaderContainer>
     );
 }
 

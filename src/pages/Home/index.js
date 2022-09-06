@@ -1,29 +1,18 @@
-import React, { useEffect, useState } from "react";
+import BestSellers from "../../components/BestSellers";
+import Releases from "../../components/Releases";
+import SearchBar from "../../components/SearchBar/index";
+import Header from "../../components/Header";
 import ProductsCarousel from "../../components/ProductsCarousel";
 
 function Home(props) {
-
-    const [products, setProducts] = useState([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        (async () => {
-            await fetch('/api/best-sellers')
-            .then(res => res.json())
-            .then(res => {
-                setProducts(res)
-                setIsLoading(false)
-            })
-        })();
-    }, [])
-
-    if(!isLoading){
-        return(
-            <>
-                <ProductsCarousel products={products}/>
-            </>
-        );
-    }
+    return(
+        <>
+            <Header themeToggler={props.themeToggler} theme={props.theme}/>
+            <SearchBar theme={props.theme}/>
+            <BestSellers />
+            <Releases />
+        </>
+    )
 }
 
 export default Home;

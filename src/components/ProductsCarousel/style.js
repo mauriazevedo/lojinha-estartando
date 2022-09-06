@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SectionTitle = styled.h2`
     font-size: 20px;
-    margin-left: 20px;
+    margin: 40px 0 40px 20px;
     font-weight: 700;
 `
 

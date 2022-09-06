@@ -10,8 +10,6 @@ import { ThemeProvider } from 'styled-components';
 import { darkTheme, lightTheme } from './styles/themes/Themes';
 import { GlobalStyles } from './styles/GlobalStyles/GlobalStyles';
 
-//Components
-import Header from './components/Header';
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -29,8 +27,7 @@ function App() {
       <BrowserRouter>
         <ThemeProvider theme ={theme === "light" ? lightTheme : darkTheme}>
           <GlobalStyles />
-          <Header themeToggler={themeToggler} theme={theme}/>
-          <AppRoutes />
+          <AppRoutes themeToggler={themeToggler} theme={theme} />
         </ThemeProvider>
       </BrowserRouter>
     </>
