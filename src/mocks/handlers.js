@@ -65,6 +65,36 @@ export const handlers = [
                 }
             ]
         }))
+    }),
+
+    rest.get("api/categories", (req, res, ctx) => {
+        return res(
+            ctx.status(200),
+            ctx.json({
+                items: [
+                    {
+                        id: 1,
+                        name: "Recipientes",
+                        icon: "BsCup"
+                    },
+                    {
+                        id: 2,
+                        name: "Vestuário",
+                        icon: "TbShirt"
+                    },
+                    {
+                        id: 3,
+                        name: "Papelaria",
+                        icon: "BiNote"
+                    },
+                    {
+                        id: 4,
+                        name: "Decoração",
+                        icon: "TbLamp"
+                    }
+                ]
+            })
+        )
     })
 ];
 

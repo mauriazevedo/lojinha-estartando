@@ -12,6 +12,7 @@ export const HeaderContainer = styled.div`
 `;
 
 export const MenuMobile = styled.nav`
+    z-index: 1;
     display: none;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(129,202,168,1) 100%);
     align-items: center;
