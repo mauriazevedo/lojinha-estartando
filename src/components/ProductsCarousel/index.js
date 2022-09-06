@@ -15,10 +15,13 @@ function ProductsCarousel(props) {
                 {props.title}
             </SectionTitle>
             <ProductsContainer>
-                {props.products["items"].map((product) => <ProductContainer>
-                    <img src={product.image} />
-                    <p>{adjustName(product.name)}</p>
-                    <p>R$ {product.price}</p>
+                {props.products["items"].map((product) => 
+                <ProductContainer>
+                    <a href={`/product/${product.id}`}>
+                        <img src={product.image} />
+                        <p>{adjustName(product.name)}</p>
+                        <p>R$ {product.price}</p>
+                    </a>
                 </ProductContainer>)}
             </ProductsContainer>
         </>

@@ -23,7 +23,7 @@ function Header(props) {
             >
                 <AiOutlineClose onClick={() => {menuToggler()}} size={42} />
                 <ul>
-                    <a href="#"><li>Home</li></a>
+                    <a href="/"><li>Home</li></a>
                     <a href="#"><li>Perfil</li></a>
                     <a href="#"><li>Carrinho</li></a>
                 </ul>

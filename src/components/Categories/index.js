@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { CategoriesContainer, Category } from "./style";
-import { TbLamp, TbShirt } from "react-icons/tb";
-import { BsCup } from "react-icons/bs";
-import { BiNote } from "react-icons/bi";
+import { TbShirt } from "react-icons/tb";
+//import { BsCup } from "react-icons/bs";
+//import { BiNote } from "react-icons/bi";
 
 function Categories() {
 
@@ -12,7 +12,7 @@ function Categories() {
 
     useEffect(() => {
         (async () => {
-            fetch("/api/categories")
+            fetch("http://meuendpoint.com/categories")
             .then(res => res.json())
             .then(res => {
                 setCategories(res);
@@ -24,7 +24,7 @@ function Categories() {
     if(!isLoading){
         return(
             <CategoriesContainer>
-                {categories["items"].map((category, Icon) => {
+                {categories["items"].map((category, index) => {
                     return(
                         <Category>
                             {/*}{Icon = category.icon}{*/}

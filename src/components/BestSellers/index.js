@@ -8,7 +8,7 @@ function BestSellers() {
 
     useEffect(() => {
         (async () => {
-            await fetch('/api/best-sellers')
+            await fetch('http://meuendpoint.com/products')
             .then(res => res.json())
             .then(res => {
                 setBestSellers(res);

@@ -28,15 +28,20 @@ export const ProductContainer = styled.div`
         width: 100%;
     }
 
-    p{
-        width: 100%;
-        margin: 5px 0;
-        font-weight: 400;
-        font-size: 14px;
-        font-family: "Open Sans", "sans-serif";
+    a{
+        text-decoration: none;
+        
+        p{
+            color: #fff;
+            width: 100%;
+            margin: 5px 0;
+            font-weight: 400;
+            font-size: 14px;
+            font-family: "Open Sans", "sans-serif";
 
-        &:nth-last-child(1){
-            margin-top: 0;
+            &:nth-last-child(1){
+                margin-top: 0;
+            }
         }
     }
 `;

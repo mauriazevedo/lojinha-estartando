@@ -8,7 +8,7 @@ function Releases() {
 
     useEffect(() => {
         (async () => {
-            await fetch('/api/releases')
+            await fetch('http://meuendpoint.com/products')
             .then(res => res.json())
             .then(res => {
                 setReleases(res);
